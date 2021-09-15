@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders form', async () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const fullNameElement = await screen.findByLabelText(/Full Name/i);
+  expect(fullNameElement).toBeInTheDocument();
 });
