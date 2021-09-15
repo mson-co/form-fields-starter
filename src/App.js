@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Component from "mson-react/lib/component";
+
+const definition = {
+  "component": "Form",
+  "fields": [
+    {
+      "name": "fullName",
+      "label": "Full Name",
+      "component": "PersonNameField"
+    },
+    {
+      "name": "submit",
+      "label": "Submit",
+      "type": null,
+      "icon": "Send",
+      "component": "ButtonField"
+    }
+  ]
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Component
+      definition={definition}
+      onSubmit={({ component }) => {
+        alert(JSON.stringify(component.getValues()));
+      }}
+    />
+  )
 }
+
 
 export default App;
