@@ -58,5 +58,11 @@ function MyForm() {
 export default MyForm;
 ```
 
+## Related Resources
+
+- [How to autogenerate forms in React and Material-UI with MSON](https://redgeoff.com/posts/mson-react-material-ui-form/)
+- [mson-react](https://github.com/redgeoff/mson-react) - UI Rendering Layer for React and Material-UI
+- [mson](https://github.com/redgeoff/mson) - Generate an app from JSON
+
 ## create-react-app
 form-fields-starter uses [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) with very [few changes](https://github.com/mson-co/form-fields-starter/pull/1/files).
